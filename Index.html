@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danza de Pasión</title>
+    <style>
+        /* Общи стилове за всички устройства */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+
+        /* Стилове за десктоп */
+        @media (min-width: 769px) {
+            body {
+                background-image: url('desktop_background.jpeg');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        /* Стилове за мобилни устройства */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('mobile_background.jpeg');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        /* Стилове за иконите */
+        .social-icons {
+        	position: absolute;
+	   	bottom: 100px; /* Разстояние от долния край на контейнера */
+	   	left: 74%;    /* Позициониране в средата по хоризонталната ос */
+	   	transform: translateX(-50%); /* Центриране по X ос чрез трансформация */
+	  	display: flex;
+	    	gap: 20px;
+        }
+
+        .social-icon img {
+            width: 50px;
+            height: 50px;
+            transition: opacity 0.3s;
+        }
+
+        .social-icon img:hover {
+            opacity: 0.7;
+        }
+	     /* Позициониране на иконата за събитие */
+        .event-icon {
+            position: absolute;
+            top: 100px;
+            right: 40px;
+        }
+
+        .event-icon img {
+            width: 70px;  /* Размер на иконата */
+            height: 70px; /* Размер на иконата */
+        }
+
+        .event-icon img:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+	 <!-- Икона за събитие горе вдясно -->
+    <div class="event-icon">
+        <a href="https://facebook.com/events/s/latino-party-danza-de-pasion-c/525480186632195/" target="_blank">
+            <img src="event_ikona_1.png" alt="Latino Party Event">
+        </a>
+    </div>
+<audio id="a1" loop>
+        <source src="Aventura.mp3" type="audio/mpeg">
+</audio>
+<script>
+			window.onload = function(){
+			   setInterval(function(){
+				   document.getElementById('a1').play()
+			   }, 1000);
+			};
+			</script>
+    <div class="content">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/groups/148573925972706/"  target="_blank" class="social-icon">
+                <img src="Facebook_Logo_2023.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/danzadepasion/" target="_blank" class="social-icon">
+                <img src="Instagram_icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
